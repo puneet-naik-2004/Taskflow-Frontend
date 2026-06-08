@@ -11,7 +11,7 @@ import {
   toggleTaskStatus,
 } from "../services/taskSevices";
 
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
 
