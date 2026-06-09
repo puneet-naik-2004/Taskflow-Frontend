@@ -177,20 +177,7 @@ const Dashboard = () => {
       </div>
     </div>
 
-    {/* <input
-      className="search-box"
-      placeholder="Search tasks..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-    />
-
-    <div className="filter-buttons">
-  <button onClick={() => setFilter("all")}>All Tasks</button>
-  <button onClick={() => setFilter("pending")}>Pending</button>
-  <button onClick={() => setFilter("completed")}>Completed</button>
-  </div> */}
-
-
+    
 
   <div className="top-filters">
   <input
@@ -219,20 +206,20 @@ const Dashboard = () => {
   {showForm ? "Close Form" : "+ Add Task"}
 </button>
 
-    {/* <TaskForm
-      title={title}
-      setTitle={setTitle}
-      description={description}
-      setDescription={setDescription}
-      handleSubmit={
-        editId
-          ? handleUpdateTask
-          : handleCreateTask
-      }
-      editId={editId}
-    /> */}
+   
 
      {showForm && (
+
+      <div className="modal-overlay" onClick={() => setShowForm(false)}>
+    
+    <div className="modal-box" onClick={(e) => e.stopPropagation()}>
+      
+      <button
+        className="close-btn"
+        onClick={() => setShowForm(false)}
+      >
+        ✖
+      </button>
   <TaskForm
     title={title}
     setTitle={setTitle}
@@ -243,17 +230,22 @@ const Dashboard = () => {
     }
     editId={editId}
   />
+  </div>
+  </div>
   )}
+
+  <div className="task-scroll">
     <TaskList
       tasks={filteredTasks}
       handleDelete={handleDelete}
       handleStatus={handleStatus}
       handleEdit={handleEdit}
     />
-
   </div>
+
+
 </div>
-    // </div>
+    </div>
   );
 };
 

@@ -40,7 +40,7 @@ const TaskList = ({
           className="toggle-btn"
             onClick={() => handleStatus(task._id)}
           >
-           🔄 Toggle Status
+           🔄  Status
           </button>
 
           <button

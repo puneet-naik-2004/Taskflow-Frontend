@@ -28,9 +28,9 @@ const Register = () => {
 
  
  try{
-  await registerUser(formData)
+  const data = await registerUser(formData)
 
-  alert("registarion suvcessfull")
+  alert("registarion successfull")
   navigate("/dashboard")
  }catch(error){
     alert(error.response?.data?.message ||

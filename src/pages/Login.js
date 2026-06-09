@@ -25,6 +25,7 @@ const handleSubmit=async(e)=>{
    try{
       const data = await loginUser (formData)
       localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user))
       alert("login successfully")
       navigate("/dashboard")
 
