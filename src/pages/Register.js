@@ -28,7 +28,7 @@ const Register = () => {
 
  
  try{
-  const data = await registerUser(formData)
+   await registerUser(formData)
 
   alert("registarion successfull")
   navigate("/dashboard")
